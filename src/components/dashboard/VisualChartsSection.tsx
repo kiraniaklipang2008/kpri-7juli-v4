@@ -9,82 +9,82 @@ import { AnggotaDonutChart } from "@/components/dashboard/charts/AnggotaDonutCha
 
 export function VisualChartsSection() {
   return (
-    <div className="mb-8">
-      <div className="mb-8 p-8 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 shadow-lg">
-        <h2 className="text-3xl font-bold text-emerald-900 mb-3">Analisis Visual Koperasi</h2>
-        <p className="text-emerald-700 text-lg font-medium">Visualisasi data komprehensif untuk pengambilan keputusan yang lebih baik</p>
+    <div className="mb-6">
+      <div className="mb-6 p-6 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-xl border border-emerald-200 shadow-lg">
+        <h2 className="text-2xl font-bold text-emerald-900 mb-2">Analisis Visual Koperasi</h2>
+        <p className="text-emerald-700 text-base font-medium">Visualisasi data komprehensif untuk pengambilan keputusan yang lebih baik</p>
       </div>
       
       {/* Charts Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Pie Chart - Komposisi Simpanan */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Komposisi Simpanan Anggota
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <SimpananPieChart />
           </CardContent>
         </Card>
 
         {/* Bar Chart - Pertumbuhan Pinjaman */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📈 Pertumbuhan Pinjaman Per Bulan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <PinjamanBarChart />
           </CardContent>
         </Card>
 
         {/* Line Chart - Tren SHU */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Tren SHU 5 Tahun Terakhir
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <SHULineChart />
           </CardContent>
         </Card>
 
         {/* Stacked Bar Chart - Piutang */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Analisis Piutang Bulanan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <PiutangStackedBarChart />
           </CardContent>
         </Card>
 
         {/* Area Chart - Simpanan vs Pinjaman */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📈 Perbandingan Simpanan & Pinjaman
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <SimpananPinjamanAreaChart />
           </CardContent>
         </Card>
 
         {/* Donut Chart - Distribusi Anggota */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               👥 Distribusi Anggota Berdasarkan Pekerjaan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <AnggotaDonutChart />
           </CardContent>
         </Card>

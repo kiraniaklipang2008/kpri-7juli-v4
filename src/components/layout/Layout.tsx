@@ -29,7 +29,7 @@ export default function Layout({ children, pageTitle }: LayoutProps) {
           <Header pageTitle={pageTitle} />
           
           <main className="flex-1 overflow-y-auto overflow-x-hidden">
-            <div className="container-responsive py-3 sm:py-4 md:py-6 min-h-full">
+            <div className="container-responsive py-2 sm:py-3 md:py-4 min-h-full">
               {children}
             </div>
           </main>

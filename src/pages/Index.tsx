@@ -28,17 +28,19 @@ export default function Index() {
   
   return (
     <Layout pageTitle="Dashboard">
-      {/* Elegant Header matching login theme */}
-      <DashboardHeader />
-      
-      {/* Main Dashboard Content */}
-      <MainDashboardContent 
-        dashboardData={dashboardData}
-        monthlyActivityData={monthlyActivityData}
-      />
+      <div className="space-y-4">
+        {/* Elegant Header matching login theme */}
+        <DashboardHeader />
+        
+        {/* Main Dashboard Content */}
+        <MainDashboardContent 
+          dashboardData={dashboardData}
+          monthlyActivityData={monthlyActivityData}
+        />
 
-      {/* New Visual Charts Section */}
-      <VisualChartsSection />
+        {/* New Visual Charts Section */}
+        <VisualChartsSection />
+      </div>
     </Layout>
   );
 }

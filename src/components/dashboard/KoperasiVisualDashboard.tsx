@@ -13,41 +13,39 @@ import { KinerjaRadarChart } from './charts/KinerjaRadarChart';
 
 export function KoperasiVisualDashboard() {
   const handleDownloadPNG = () => {
-    // Implementation for PNG download would go here
     console.log('Downloading as PNG...');
   };
 
   const handleDownloadPDF = () => {
-    // Implementation for PDF download would go here
     console.log('Downloading as PDF...');
   };
 
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 min-h-screen">
+    <div className="p-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 min-h-screen">
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex justify-between items-center mb-6 p-6 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-xl shadow-lg text-white">
+      <div className="mb-6">
+        <div className="flex justify-between items-center mb-4 p-4 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-lg shadow-lg text-white">
           <div>
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-2xl font-bold mb-1">
               Dashboard Visual Koperasi Simpan Pinjam
             </h1>
-            <p className="text-blue-100 text-lg">
+            <p className="text-blue-100 text-base">
               Analisis komprehensif data koperasi dengan visualisasi interaktif
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <Button 
               onClick={handleDownloadPNG} 
-              className="bg-white text-blue-600 hover:bg-blue-50 shadow-md font-semibold"
+              className="bg-white text-blue-600 hover:bg-blue-50 shadow-md font-semibold px-3 py-2 text-sm"
             >
-              <Download className="h-4 w-4 mr-2" />
+              <Download className="h-4 w-4 mr-1" />
               PNG
             </Button>
             <Button 
               onClick={handleDownloadPDF} 
-              className="bg-green-500 hover:bg-green-600 text-white shadow-md font-semibold"
+              className="bg-green-500 hover:bg-green-600 text-white shadow-md font-semibold px-3 py-2 text-sm"
             >
-              <FileDown className="h-4 w-4 mr-2" />
+              <FileDown className="h-4 w-4 mr-1" />
               PDF
             </Button>
           </div>
@@ -55,87 +53,87 @@ export function KoperasiVisualDashboard() {
       </div>
 
       {/* Charts Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Pie Chart - Komposisi Simpanan */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               📊 Komposisi Simpanan Anggota
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <SimpananPieChart />
           </CardContent>
         </Card>
 
         {/* Bar Chart - Pertumbuhan Pinjaman */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               📈 Pertumbuhan Pinjaman Per Bulan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <PinjamanBarChart />
           </CardContent>
         </Card>
 
         {/* Line Chart - Tren SHU */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               📊 Tren SHU 5 Tahun Terakhir
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <SHULineChart />
           </CardContent>
         </Card>
 
         {/* Stacked Bar Chart - Piutang */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               📊 Analisis Piutang Bulanan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <PiutangStackedBarChart />
           </CardContent>
         </Card>
 
         {/* Area Chart - Simpanan vs Pinjaman */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               📈 Perbandingan Simpanan & Pinjaman
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <SimpananPinjamanAreaChart />
           </CardContent>
         </Card>
 
         {/* Donut Chart - Distribusi Anggota */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               👥 Distribusi Anggota Berdasarkan Pekerjaan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <AnggotaDonutChart />
           </CardContent>
         </Card>
 
         {/* Radar Chart - Kinerja Koperasi */}
-        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 lg:col-span-2 hover:shadow-xl transition-all duration-300">
-          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-lg font-semibold flex items-center gap-2">
+        <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50 lg:col-span-2 hover:shadow-lg transition-all duration-300">
+          <CardHeader className="pb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg py-3">
+            <CardTitle className="text-base font-semibold flex items-center gap-2">
               🎯 Penilaian Kinerja Koperasi
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
+          <CardContent className="pt-3 p-3">
             <KinerjaRadarChart />
           </CardContent>
         </Card>

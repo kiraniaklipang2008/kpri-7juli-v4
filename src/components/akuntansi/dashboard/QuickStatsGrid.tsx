@@ -36,18 +36,18 @@ const quickStats = [
 
 export default function QuickStatsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {quickStats.map((stat, index) => (
         <Card key={index} className="hover:shadow-lg transition-shadow">
-          <CardContent className="flex items-center p-6">
-            <div className={`rounded-full p-3 mr-4 ${stat.color} bg-opacity-10`}>
-              <stat.icon className={`h-6 w-6 ${stat.color}`} />
+          <CardContent className="flex items-center p-4">
+            <div className={`rounded-full p-3 mr-3 ${stat.color} bg-opacity-10`}>
+              <stat.icon className={`h-5 w-5 ${stat.color}`} />
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-muted-foreground">
                 {stat.title}
               </p>
-              <p className="text-2xl font-bold">{stat.value}</p>
+              <p className="text-xl font-bold">{stat.value}</p>
               <p className={`text-xs ${stat.change.startsWith('+') ? 'text-green-600' : 'text-red-600'}`}>
                 {stat.change} dari bulan lalu
               </p>

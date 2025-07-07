@@ -35,54 +35,54 @@ export function MainDashboardContent({
       />
       
       {/* Transaction Activity and Performance Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Transaction Activity Chart Card */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Aktivitas Transaksi Bulanan
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
-            <div className="h-[300px]">
+          <CardContent className="pt-4 p-4">
+            <div className="h-[250px]">
               <ActivityBarChart data={monthlyActivityData} />
             </div>
           </CardContent>
         </Card>
         
         {/* Radar Chart - Kinerja Koperasi */}
-        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-2xl">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-            <CardTitle className="text-xl font-bold flex items-center gap-3">
+        <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
+          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+            <CardTitle className="text-lg font-semibold flex items-center gap-2">
               🎯 Penilaian Kinerja Koperasi
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4 p-4">
             <KinerjaRadarChart />
           </CardContent>
         </Card>
       </div>
       
       {/* Recent Transactions Table */}
-      <Card className="mb-8 shadow-2xl border-0 bg-white/95 backdrop-blur-sm rounded-2xl">
-        <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-          <CardTitle className="text-xl font-bold flex items-center gap-3">
+      <Card className="mb-6 shadow-lg border-0 bg-white/95 backdrop-blur-sm rounded-xl">
+        <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardTitle className="text-lg font-semibold flex items-center gap-2">
             📋 Transaksi Terbaru
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-6">
+        <CardContent className="pt-4 p-4">
           <RecentTransactionsTable transactions={recentTransaksi} />
         </CardContent>
       </Card>
       
       {/* Productivity Table */}
-      <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm rounded-2xl">
-        <CardHeader className="pb-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-2xl">
-          <CardTitle className="text-xl font-bold flex items-center gap-3">
+      <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm rounded-xl">
+        <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardTitle className="text-lg font-semibold flex items-center gap-2">
             📈 Produktivitas Koperasi
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-6">
+        <CardContent className="pt-4 p-4">
           <ProductivityTable {...productivityData} />
         </CardContent>
       </Card>

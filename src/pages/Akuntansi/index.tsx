@@ -10,7 +10,7 @@ import RecentActivitySection from "@/components/akuntansi/dashboard/RecentActivi
 export default function AkuntansiIndex() {
   return (
     <Layout pageTitle="Akuntansi">
-      <div className="container mx-auto py-6 space-y-8">
+      <div className="container mx-auto py-4 space-y-6">
         <AkuntansiHeader />
         <QuickStatsGrid />
         <MainModulesGrid />
