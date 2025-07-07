@@ -81,10 +81,10 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
               <TooltipContent 
                 side="right" 
                 align="center"
-                className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[9999] relative"
-                sideOffset={12}
+                className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[99999] fixed"
+                sideOffset={20}
                 avoidCollisions={true}
-                collisionPadding={8}
+                collisionPadding={16}
                 sticky="always"
               >
                 <p className="font-medium text-sm">{item.title}</p>
@@ -141,10 +141,10 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
           <TooltipContent 
             side="right" 
             align="center"
-            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[9999] relative"
-            sideOffset={12}
+            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[99999] fixed"
+            sideOffset={20}
             avoidCollisions={true}
-            collisionPadding={8}
+            collisionPadding={16}
             sticky="always"
           >
             <p className="font-medium text-sm">{item.title}</p>
