@@ -25,7 +25,7 @@ export function SidebarNav() {
     <Sidebar 
       variant="sidebar" 
       collapsible="icon" 
-      className="border-r border-emerald-100 hidden md:flex bg-gradient-to-b from-emerald-50 via-white to-teal-50 shadow-2xl"
+      className="border-r border-emerald-100 hidden md:flex bg-gradient-to-b from-emerald-50 via-white to-teal-50 shadow-2xl z-40"
     >
       <SidebarHeader className="border-b border-emerald-200 bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 shadow-xl">
         <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-3 sm:py-4 relative">

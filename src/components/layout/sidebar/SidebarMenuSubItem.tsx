@@ -51,10 +51,10 @@ export function SidebarMenuSubItem({ path, icon: Icon, title, isActive }: Sideba
           <TooltipContent 
             side="right" 
             align="center"
-            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[99999] fixed"
-            sideOffset={20}
+            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[999999]"
+            sideOffset={25}
             avoidCollisions={true}
-            collisionPadding={16}
+            collisionPadding={20}
             sticky="always"
           >
             <p className="font-medium text-sm">{title}</p>
