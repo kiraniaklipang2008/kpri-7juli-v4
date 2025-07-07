@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
-import { Globe, Bell, Shield, Users, Calculator } from "lucide-react";
+import { Globe, Bell, Shield, Calculator } from "lucide-react";
 import { getPengaturan } from "@/services/pengaturanService";
 import { Pengaturan } from "@/types";
 import {
@@ -17,7 +17,6 @@ import { SukuBungaSettings } from "@/components/pengaturan/SukuBungaSettings";
 import { TenorSettings } from "@/components/pengaturan/TenorSettings";
 import { DendaSettings } from "@/components/pengaturan/DendaSettings";
 import { SHUSettings } from "@/components/pengaturan/SHUSettings";
-import { UserManagementSettings } from "@/components/pengaturan/UserManagementSettings";
 import { BackupResetSettings } from "@/components/pengaturan/BackupResetSettings";
 import { NotificationSettings } from "@/components/pengaturan/NotificationSettings";
 
@@ -39,12 +38,6 @@ const sidebarItems = [
     title: "Keamanan", 
     icon: Shield,
     description: "Pengaturan keamanan dan autentikasi"
-  },
-  {
-    id: "permissions",
-    title: "Pengguna dan Peran",
-    icon: Users,
-    description: "Manajemen pengguna dan peran akses"
   },
   {
     id: "pusat-formula",
@@ -137,16 +130,6 @@ export default function PengaturanPage() {
               <p className="text-sm text-gray-500 mt-1">Pengaturan keamanan dan autentikasi</p>
             </div>
             <BackupResetSettings />
-          </div>
-        );
-      case "permissions":
-        return (
-          <div className="space-y-6">
-            <div className="border-b border-gray-200 pb-4">
-              <h2 className="text-2xl font-semibold text-gray-900">Izin</h2>
-              <p className="text-sm text-gray-500 mt-1">Peran pengguna dan izin akses</p>
-            </div>
-            <UserManagementSettings settings={{}} setSettings={() => {}} />
           </div>
         );
       case "pusat-formula":
