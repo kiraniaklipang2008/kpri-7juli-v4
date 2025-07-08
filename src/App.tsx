@@ -3,18 +3,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { VisualDashboard } from './pages/Dashboard';
-import { Anggota } from './pages/Anggota/Anggota';
-import { UnitKerjaList } from './pages/UnitKerja/UnitKerjaList';
-import { TransaksiList } from './pages/Transaksi/TransaksiList';
-import { LaporanPage } from './pages/Keuangan/LaporanPage';
+import AnggotaList from './pages/Anggota/AnggotaList';
+import UnitKerjaList from './pages/UnitKerja/UnitKerjaList';
+import TransaksiList from './pages/Transaksi/TransaksiList';
+import LaporanPage from './pages/Keuangan/LaporanPage';
 import KategoriTransaksi from './pages/Keuangan/KategoriTransaksi';
-import { TransaksiList as KeuanganTransaksi } from './pages/Keuangan/TransaksiList';
-import { LaporanKeuangan } from './pages/Keuangan/LaporanKeuangan';
-import { PengajuanList } from './pages/Transaksi/Pengajuan/PengajuanList';
-import { JenisPage } from './pages/Transaksi/Jenis/JenisPage';
-import { AngsuranList } from './pages/Transaksi/Angsuran/AngsuranList';
-import { PenarikanList } from './pages/Transaksi/Penarikan/PenarikanList';
-import { QuickAccessPage } from './pages/QuickAccess/QuickAccessPage';
+import TransaksiKeuangan from './pages/Keuangan/TransaksiList';
+import LaporanKeuangan from './pages/Keuangan/LaporanKeuangan';
+import PengajuanList from './pages/Transaksi/Pengajuan/PengajuanList';
+import JenisPage from './pages/Transaksi/Jenis/JenisPage';
+import AngsuranList from './pages/Transaksi/Angsuran/AngsuranList';
+import PenarikanList from './pages/Transaksi/Penarikan/PenarikanList';
+import QuickAccessPage from './pages/QuickAccess/QuickAccessPage';
 import PengaturanPage from './pages/Pengaturan/PengaturanPage';
 import PenggunaPenanPage from './pages/Pengaturan/PenggunaPenanPage';
 import AlgoritmaPage from './pages/Pengaturan/AlgoritmaPage';
@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<VisualDashboard />} />
-          <Route path="/master/anggota" element={<Anggota />} />
+          <Route path="/master/anggota" element={<AnggotaList />} />
           <Route path="/master/unit-kerja" element={<UnitKerjaList />} />
           <Route path="/simpanan" element={<TransaksiList />} />
           <Route path="/pinjaman" element={<TransaksiList />} />
@@ -38,7 +38,7 @@ function App() {
 
           {/* Keuangan Routes */}
           <Route path="/keuangan/kategori" element={<KategoriTransaksi />} />
-          <Route path="/keuangan/transaksi" element={<KeuanganTransaksi />} />
+          <Route path="/keuangan/transaksi" element={<TransaksiKeuangan />} />
           <Route path="/keuangan/laporan" element={<LaporanKeuangan />} />
 
           {/* Transaksi Routes */}
