@@ -10,16 +10,16 @@ import { AnggotaDonutChart } from "@/components/dashboard/charts/AnggotaDonutCha
 export function VisualChartsSection() {
   return (
     <div className="mb-6">
-      <div className="mb-6 p-6 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-xl border border-emerald-200 shadow-lg">
-        <h2 className="text-2xl font-bold text-emerald-900 mb-2">Analisis Visual Koperasi</h2>
-        <p className="text-emerald-700 text-base font-medium">Visualisasi data komprehensif untuk pengambilan keputusan yang lebih baik</p>
+      <div className="mb-6 p-6 bg-gradient-to-r from-koperasi-light via-koperasi-light to-koperasi-light rounded-xl border border-koperasi-green/20 shadow-lg">
+        <h2 className="text-2xl font-bold text-koperasi-dark mb-2">Analisis Visual Koperasi</h2>
+        <p className="text-koperasi-gray text-base font-medium">Visualisasi data komprehensif untuk pengambilan keputusan yang lebih baik</p>
       </div>
       
       {/* Charts Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Pie Chart - Komposisi Simpanan */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Komposisi Simpanan Anggota
             </CardTitle>
@@ -31,7 +31,7 @@ export function VisualChartsSection() {
 
         {/* Bar Chart - Pertumbuhan Pinjaman */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📈 Pertumbuhan Pinjaman Per Bulan
             </CardTitle>
@@ -43,7 +43,7 @@ export function VisualChartsSection() {
 
         {/* Line Chart - Tren SHU */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Tren SHU 5 Tahun Terakhir
             </CardTitle>
@@ -55,7 +55,7 @@ export function VisualChartsSection() {
 
         {/* Stacked Bar Chart - Piutang */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Analisis Piutang Bulanan
             </CardTitle>
@@ -67,7 +67,7 @@ export function VisualChartsSection() {
 
         {/* Area Chart - Simpanan vs Pinjaman */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📈 Perbandingan Simpanan & Pinjaman
             </CardTitle>
@@ -79,7 +79,7 @@ export function VisualChartsSection() {
 
         {/* Donut Chart - Distribusi Anggota */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               👥 Distribusi Anggota Berdasarkan Pekerjaan
             </CardTitle>

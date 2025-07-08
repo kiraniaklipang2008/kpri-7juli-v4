@@ -38,7 +38,7 @@ export function MainDashboardContent({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Transaction Activity Chart Card */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               📊 Aktivitas Transaksi Bulanan
             </CardTitle>
@@ -52,7 +52,7 @@ export function MainDashboardContent({
         
         {/* Radar Chart - Kinerja Koperasi */}
         <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] rounded-xl">
-          <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+          <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
             <CardTitle className="text-lg font-semibold flex items-center gap-2">
               🎯 Penilaian Kinerja Koperasi
             </CardTitle>
@@ -65,7 +65,7 @@ export function MainDashboardContent({
       
       {/* Recent Transactions Table */}
       <Card className="mb-6 shadow-lg border-0 bg-white/95 backdrop-blur-sm rounded-xl">
-        <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+        <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
           <CardTitle className="text-lg font-semibold flex items-center gap-2">
             📋 Transaksi Terbaru
           </CardTitle>
@@ -77,7 +77,7 @@ export function MainDashboardContent({
       
       {/* Productivity Table */}
       <Card className="shadow-lg border-0 bg-white/95 backdrop-blur-sm rounded-xl">
-        <CardHeader className="pb-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-xl py-3">
+        <CardHeader className="pb-2 bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white rounded-t-xl py-3">
           <CardTitle className="text-lg font-semibold flex items-center gap-2">
             📈 Produktivitas Koperasi
           </CardTitle>
