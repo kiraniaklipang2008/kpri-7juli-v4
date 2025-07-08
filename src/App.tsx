@@ -1,50 +1,53 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Anggota from './pages/Anggota/Anggota';
-import UnitKerja from './pages/UnitKerja/UnitKerja';
-import Simpanan from './pages/Simpanan/Simpanan';
-import Pinjaman from './pages/Pinjaman/Pinjaman';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { VisualDashboard } from './pages/Dashboard';
+import { Anggota } from './pages/Anggota/Anggota';
+import { UnitKerjaList } from './pages/UnitKerja/UnitKerjaList';
+import { TransaksiList } from './pages/Transaksi/TransaksiList';
+import { LaporanPage } from './pages/Keuangan/LaporanPage';
+import KategoriTransaksi from './pages/Keuangan/KategoriTransaksi';
+import { TransaksiList as KeuanganTransaksi } from './pages/Keuangan/TransaksiList';
+import { LaporanKeuangan } from './pages/Keuangan/LaporanKeuangan';
+import { PengajuanList } from './pages/Transaksi/Pengajuan/PengajuanList';
+import { JenisPage } from './pages/Transaksi/Jenis/JenisPage';
+import { AngsuranList } from './pages/Transaksi/Angsuran/AngsuranList';
+import { PenarikanList } from './pages/Transaksi/Penarikan/PenarikanList';
+import { QuickAccessPage } from './pages/QuickAccess/QuickAccessPage';
 import PengaturanPage from './pages/Pengaturan/PengaturanPage';
+import PenggunaPenanPage from './pages/Pengaturan/PenggunaPenanPage';
 import AlgoritmaPage from './pages/Pengaturan/AlgoritmaPage';
 import AuditTrail from './pages/Pengaturan/AuditTrail';
 import NotFound from './pages/NotFound';
 import Laporan from './pages/Laporan/Laporan';
-import KategoriTransaksi from './pages/Keuangan/KategoriTransaksi';
-import TransaksiKeuangan from './pages/Keuangan/TransaksiKeuangan';
-import LaporanArusKas from './pages/Keuangan/LaporanArusKas';
-import Pengajuan from './pages/Transaksi/Pengajuan';
-import JenisTransaksi from './pages/Transaksi/JenisTransaksi';
-import Angsuran from './pages/Transaksi/Angsuran';
-import Penarikan from './pages/Transaksi/Penarikan';
-import AksesCepat from './pages/AksesCepat';
-import { QueryClient } from 'react-query';
-import PenggunaPenanPage from './pages/Pengaturan/PenggunaPenanPage';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Router>
-      <QueryClient>
+    <QueryClientProvider client={queryClient}>
+      <Router>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<VisualDashboard />} />
           <Route path="/master/anggota" element={<Anggota />} />
-          <Route path="/master/unit-kerja" element={<UnitKerja />} />
-          <Route path="/simpanan" element={<Simpanan />} />
-          <Route path="/pinjaman" element={<Pinjaman />} />
+          <Route path="/master/unit-kerja" element={<UnitKerjaList />} />
+          <Route path="/simpanan" element={<TransaksiList />} />
+          <Route path="/pinjaman" element={<TransaksiList />} />
           <Route path="/laporan" element={<Laporan />} />
 
           {/* Keuangan Routes */}
           <Route path="/keuangan/kategori" element={<KategoriTransaksi />} />
-          <Route path="/keuangan/transaksi" element={<TransaksiKeuangan />} />
-          <Route path="/keuangan/laporan" element={<LaporanArusKas />} />
+          <Route path="/keuangan/transaksi" element={<KeuanganTransaksi />} />
+          <Route path="/keuangan/laporan" element={<LaporanKeuangan />} />
 
           {/* Transaksi Routes */}
-          <Route path="/transaksi/pengajuan" element={<Pengajuan />} />
-          <Route path="/transaksi/jenis" element={<JenisTransaksi />} />
-          <Route path="/transaksi/angsuran" element={<Angsuran />} />
-          <Route path="/transaksi/penarikan" element={<Penarikan />} />
+          <Route path="/transaksi/pengajuan" element={<PengajuanList />} />
+          <Route path="/transaksi/jenis" element={<JenisPage />} />
+          <Route path="/transaksi/angsuran" element={<AngsuranList />} />
+          <Route path="/transaksi/penarikan" element={<PenarikanList />} />
 
-          <Route path="/akses-cepat" element={<AksesCepat />} />
+          <Route path="/akses-cepat" element={<QuickAccessPage />} />
           
           {/* Pengaturan Routes */}
           <Route path="/pengaturan" element={<PengaturanPage />} />
@@ -54,8 +57,8 @@ function App() {
 
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </QueryClient>
-    </Router>
+      </Router>
+    </QueryClientProvider>
   );
 }
 
