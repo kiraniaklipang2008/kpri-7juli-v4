@@ -43,6 +43,13 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
     }
   }, [hasActiveSubItem]);
 
+  // Handle collapsible toggle - prevent default action
+  const handleToggle = (event: React.MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setIsOpen(!isOpen);
+  };
+
   if (hasSubItems) {
     return (
       <TooltipProvider>
@@ -54,6 +61,7 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
                   <SidebarMenuButton
                     tooltip={item.title}
                     isActive={isActive}
+                    onClick={handleToggle}
                     className={`font-medium w-full rounded-xl transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm border px-4 py-3 min-h-[52px] ${
                       isActive 
                         ? 'bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white shadow-lg border-koperasi-green/30' 
@@ -109,6 +117,12 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
     );
   }
 
+  // Handle single menu item click - prevent default scroll behavior
+  const handleItemClick = (event: React.MouseEvent) => {
+    // Allow normal Link navigation, but prevent any scroll behavior
+    event.stopPropagation();
+  };
+
   return (
     <TooltipProvider>
       <ShadcnSidebarMenuItem>
@@ -124,7 +138,11 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
                   : 'hover:bg-gradient-to-r hover:from-koperasi-light hover:to-gray-100 text-koperasi-dark hover:text-koperasi-dark border-gray-200 hover:border-koperasi-green/30'
               }`}
             >
-              <Link to={item.path} className="flex items-center gap-3 w-full">
+              <Link 
+                to={item.path} 
+                className="flex items-center gap-3 w-full"
+                onClick={handleItemClick}
+              >
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-md flex-shrink-0 ${
                   isActive ? 'bg-white/20' : 'bg-koperasi-green'
                 }`}>

@@ -20,6 +20,11 @@ type SidebarMenuSubItemProps = {
 };
 
 export function SidebarMenuSubItem({ path, icon: Icon, title, isActive }: SidebarMenuSubItemProps) {
+  // Handle sub-item click - prevent scroll behavior
+  const handleSubItemClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
+  };
+
   return (
     <TooltipProvider>
       <ShadcnSidebarMenuSubItem>
@@ -34,7 +39,11 @@ export function SidebarMenuSubItem({ path, icon: Icon, title, isActive }: Sideba
                   : 'hover:bg-gradient-to-r hover:from-koperasi-light hover:to-gray-100 text-koperasi-dark hover:text-koperasi-dark border-gray-200 hover:border-koperasi-green/30'
               }`}
             >
-              <Link to={path} className="w-full flex items-center gap-3">
+              <Link 
+                to={path} 
+                className="w-full flex items-center gap-3"
+                onClick={handleSubItemClick}
+              >
                 <div className={`w-6 h-6 rounded-md flex items-center justify-center shadow-sm flex-shrink-0 ${
                   isActive ? 'bg-white/20' : 'bg-koperasi-green'
                 }`}>
