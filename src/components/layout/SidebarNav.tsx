@@ -25,9 +25,9 @@ export function SidebarNav() {
     <Sidebar 
       variant="sidebar" 
       collapsible="icon" 
-      className="border-r border-emerald-100 hidden md:flex bg-gradient-to-b from-emerald-50 via-white to-teal-50 shadow-2xl z-40"
+      className="border-r border-gray-200 hidden md:flex bg-gradient-to-b from-koperasi-light via-white to-gray-50 shadow-lg z-40"
     >
-      <SidebarHeader className="border-b border-emerald-200 bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 shadow-xl">
+      <SidebarHeader className="border-b border-gray-200 bg-gradient-to-r from-koperasi-blue to-koperasi-green shadow-lg">
         <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-3 sm:py-4 relative">
           <div className="absolute inset-0 bg-black/10 rounded-lg"></div>
           <div className="relative z-10 flex items-center gap-2 sm:gap-3 w-full">
@@ -42,14 +42,14 @@ export function SidebarNav() {
         </div>
       </SidebarHeader>
       
-      <SidebarContent className="overflow-hidden bg-gradient-to-b from-emerald-50 via-white to-teal-50">
+      <SidebarContent className="overflow-hidden bg-gradient-to-b from-koperasi-light via-white to-gray-50">
         <ScrollArea className="h-full">
           <div className="p-2 sm:p-3">
             {/* Quick Access Link */}
             <div className="mb-4 sm:mb-5 group-data-[collapsible=icon]:hidden">
               <SidebarMenuButton 
                 asChild
-                className="w-full justify-start gap-3 h-auto p-3 sm:p-4 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:via-emerald-700 hover:to-teal-700 text-white border-0 rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                className="w-full justify-start gap-3 h-auto p-3 sm:p-4 bg-gradient-to-r from-koperasi-blue to-koperasi-green hover:from-koperasi-blue/90 hover:to-koperasi-green/90 text-white border-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               >
                 <Link to="/akses-cepat">
                   <div className="flex items-center gap-3 w-full">
@@ -58,12 +58,12 @@ export function SidebarNav() {
                     </div>
                     <div className="text-left min-w-0 flex-1">
                       <div className="font-bold text-white text-sm sm:text-base truncate drop-shadow-sm">Akses Cepat</div>
-                      <div className="text-xs sm:text-sm text-emerald-100 truncate">Quick access ke semua module</div>
+                      <div className="text-xs sm:text-sm text-white/80 truncate">Quick access ke semua module</div>
                     </div>
                   </div>
                 </Link>
               </SidebarMenuButton>
-              <Separator className="my-4 sm:my-5 bg-emerald-200/50" />
+              <Separator className="my-4 sm:my-5 bg-gray-200" />
             </div>
             
             {/* Regular Menu Sections - Only show visible ones */}
@@ -80,12 +80,12 @@ export function SidebarNav() {
         </ScrollArea>
       </SidebarContent>
       
-      <SidebarFooter className="border-t border-emerald-200 bg-gradient-to-r from-emerald-50 to-teal-50 backdrop-blur-sm">
+      <SidebarFooter className="border-t border-gray-200 bg-gradient-to-r from-koperasi-light to-gray-50 backdrop-blur-sm">
         <div className="p-3 sm:p-4">
           <SidebarMenuButton 
             variant="outline"
             tooltip="Keluar"
-            className="w-full justify-start bg-gradient-to-r from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 text-red-700 hover:text-red-800 border-2 border-red-200 hover:border-red-300 text-sm sm:text-base rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl backdrop-blur-sm"
+            className="w-full justify-start bg-gradient-to-r from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 text-red-700 hover:text-red-800 border-2 border-red-200 hover:border-red-300 text-sm sm:text-base rounded-xl transition-all duration-200 shadow-md hover:shadow-lg backdrop-blur-sm"
           >
             <LogOut className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
             <span className="group-data-[collapsible=icon]:hidden font-semibold">Keluar</span>

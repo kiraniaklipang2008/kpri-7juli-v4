@@ -54,26 +54,26 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
                   <SidebarMenuButton
                     tooltip={item.title}
                     isActive={isActive}
-                    className={`font-medium w-full rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm border px-4 py-3 min-h-[52px] ${
+                    className={`font-medium w-full rounded-xl transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm border px-4 py-3 min-h-[52px] ${
                       isActive 
-                        ? 'bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 text-white shadow-2xl border-emerald-300' 
-                        : 'hover:bg-gradient-to-r hover:from-emerald-100 hover:to-teal-100 text-emerald-800 hover:text-emerald-900 border-emerald-200/50 hover:border-emerald-300'
+                        ? 'bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white shadow-lg border-koperasi-green/30' 
+                        : 'hover:bg-gradient-to-r hover:from-koperasi-light hover:to-gray-100 text-koperasi-dark hover:text-koperasi-dark border-gray-200 hover:border-koperasi-green/30'
                     }`}
                   >
                     <div className="flex items-center gap-3 w-full">
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-md flex-shrink-0 ${
-                        isActive ? 'bg-white/20' : 'bg-emerald-600'
+                        isActive ? 'bg-white/20' : 'bg-koperasi-green'
                       }`}>
                         <item.icon className="h-4 w-4 text-white" />
                       </div>
                       <span className={`font-semibold text-sm leading-tight flex-1 min-w-0 text-left truncate ${
-                        isActive ? 'text-white' : 'text-emerald-800 group-hover:text-emerald-900'
+                        isActive ? 'text-white' : 'text-koperasi-dark group-hover:text-koperasi-dark'
                       }`}>
                         {item.title}
                       </span>
                       <ChevronDown className={`h-4 w-4 transition-transform duration-200 flex-shrink-0 ${
                         isOpen ? 'rotate-180' : ''
-                      } ${isActive ? 'text-white' : 'text-emerald-700'}`} />
+                      } ${isActive ? 'text-white' : 'text-koperasi-gray'}`} />
                     </div>
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
@@ -81,7 +81,7 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
               <TooltipContent 
                 side="right" 
                 align="center"
-                className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[999999]"
+                className="bg-koperasi-dark text-white border-gray-600 shadow-xl max-w-xs z-[999999]"
                 sideOffset={25}
                 avoidCollisions={true}
                 collisionPadding={20}
@@ -91,7 +91,7 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
               </TooltipContent>
             </Tooltip>
             <CollapsibleContent>
-              <SidebarMenuSub className="border-l-2 border-emerald-300 ml-4 pl-3 mt-2 space-y-1">
+              <SidebarMenuSub className="border-l-2 border-koperasi-green/30 ml-4 pl-3 mt-2 space-y-1">
                 {item.subItems?.map((subItem, subIndex) => (
                   <SidebarMenuSubItem
                     key={subIndex}
@@ -118,20 +118,20 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
               asChild
               tooltip={item.title}
               isActive={locationPath === item.path}
-              className={`font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm border px-4 py-3 min-h-[52px] ${
+              className={`font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm border px-4 py-3 min-h-[52px] ${
                 isActive 
-                  ? 'bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 text-white shadow-2xl border-emerald-300' 
-                  : 'hover:bg-gradient-to-r hover:from-emerald-100 hover:to-teal-100 text-emerald-800 hover:text-emerald-900 border-emerald-200/50 hover:border-emerald-300'
+                  ? 'bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white shadow-lg border-koperasi-green/30' 
+                  : 'hover:bg-gradient-to-r hover:from-koperasi-light hover:to-gray-100 text-koperasi-dark hover:text-koperasi-dark border-gray-200 hover:border-koperasi-green/30'
               }`}
             >
               <Link to={item.path} className="flex items-center gap-3 w-full">
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-md flex-shrink-0 ${
-                  isActive ? 'bg-white/20' : 'bg-emerald-600'
+                  isActive ? 'bg-white/20' : 'bg-koperasi-green'
                 }`}>
                   <item.icon className="h-4 w-4 text-white" />
                 </div>
                 <span className={`font-semibold text-sm leading-tight flex-1 min-w-0 text-left truncate ${
-                  isActive ? 'text-white' : 'text-emerald-800'
+                  isActive ? 'text-white' : 'text-koperasi-dark'
                 }`}>
                   {item.title}
                 </span>
@@ -141,7 +141,7 @@ export function SidebarMenuItem({ item, isActive, locationPath }: SidebarMenuIte
           <TooltipContent 
             side="right" 
             align="center"
-            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[999999]"
+            className="bg-koperasi-dark text-white border-gray-600 shadow-xl max-w-xs z-[999999]"
             sideOffset={25}
             avoidCollisions={true}
             collisionPadding={20}

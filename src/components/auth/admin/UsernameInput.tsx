@@ -1,6 +1,5 @@
 
 import { User } from "lucide-react";
-import { Input } from "@/components/ui/input";
 import { ControllerRenderProps } from "react-hook-form";
 
 interface UsernameInputProps {
@@ -10,10 +9,11 @@ interface UsernameInputProps {
 export function UsernameInput({ field }: UsernameInputProps) {
   return (
     <div className="relative">
-      <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-      <Input
-        placeholder="Masukkan username Anda"
-        className="pl-12 h-12 border-gray-200 bg-gray-50/50 hover:bg-white focus:bg-white rounded-xl transition-all duration-200 text-base"
+      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-koperasi-gray" />
+      <input
+        type="text"
+        placeholder="Masukkan username"
+        className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 border border-gray-200 rounded-xl bg-white/80 backdrop-blur-sm text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-koperasi-green/50 focus:border-koperasi-green transition-all"
         {...field}
       />
     </div>

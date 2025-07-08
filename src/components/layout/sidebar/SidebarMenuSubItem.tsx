@@ -30,13 +30,13 @@ export function SidebarMenuSubItem({ path, icon: Icon, title, isActive }: Sideba
               isActive={isActive} 
               className={`rounded-lg transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm border mb-1 px-3 py-2.5 min-h-[44px] ${
                 isActive 
-                  ? 'bg-gradient-to-r from-emerald-400 to-teal-500 text-white shadow-xl border-emerald-300' 
-                  : 'hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 text-emerald-800 hover:text-emerald-900 border-emerald-200/50 hover:border-emerald-300'
+                  ? 'bg-gradient-to-r from-koperasi-blue to-koperasi-green text-white shadow-lg border-koperasi-green/30' 
+                  : 'hover:bg-gradient-to-r hover:from-koperasi-light hover:to-gray-100 text-koperasi-dark hover:text-koperasi-dark border-gray-200 hover:border-koperasi-green/30'
               }`}
             >
               <Link to={path} className="w-full flex items-center gap-3">
                 <div className={`w-6 h-6 rounded-md flex items-center justify-center shadow-sm flex-shrink-0 ${
-                  isActive ? 'bg-white/20' : 'bg-emerald-500'
+                  isActive ? 'bg-white/20' : 'bg-koperasi-green'
                 }`}>
                   <Icon className="h-3.5 w-3.5 text-white" />
                 </div>
@@ -51,7 +51,7 @@ export function SidebarMenuSubItem({ path, icon: Icon, title, isActive }: Sideba
           <TooltipContent 
             side="right" 
             align="center"
-            className="bg-slate-900 text-white border-slate-700 shadow-2xl max-w-xs z-[999999]"
+            className="bg-koperasi-dark text-white border-gray-600 shadow-xl max-w-xs z-[999999]"
             sideOffset={25}
             avoidCollisions={true}
             collisionPadding={20}

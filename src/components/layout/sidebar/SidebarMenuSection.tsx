@@ -25,8 +25,8 @@ export function SidebarMenuSection({ section, locationPath }: SidebarMenuSection
 
   return (
     <SidebarGroup className="mb-2">
-      <SidebarGroupLabel className="flex items-center text-xs uppercase tracking-wider font-bold text-emerald-800 bg-gradient-to-r from-emerald-100 via-emerald-200 to-teal-100 px-3 py-2 rounded-xl mb-2 shadow-lg backdrop-blur-sm border border-emerald-200/50">
-        <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center mr-2 shadow-md">
+      <SidebarGroupLabel className="flex items-center text-xs uppercase tracking-wider font-bold text-koperasi-dark bg-gradient-to-r from-koperasi-light to-gray-100 px-3 py-2 rounded-xl mb-2 shadow-md backdrop-blur-sm border border-gray-200">
+        <div className="w-6 h-6 bg-koperasi-green rounded-lg flex items-center justify-center mr-2 shadow-md">
           <section.icon className="h-3 w-3 text-white" />
         </div>
         {section.title}
